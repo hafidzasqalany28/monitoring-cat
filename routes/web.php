@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\LocationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,16 +14,13 @@ use App\Http\Controllers\LocationController;
 |
 */
 
-Route::middleware(['web'])->group(function () {
-    Route::get('/', function () {
-        return view('auth.login');
-    });
-
-    Auth::routes();
-
-    Route::get('/home', 'HomeController@index')->name('home');
-    Route::get('/history', 'HistoryController@index')->name('history');
-    Route::get('/profile', 'ProfileController@index')->name('profile');
-    Route::post('/endpoint', [LocationController::class, 'store']);
-    Route::put('/profile', 'ProfileController@update')->name('profile.update');
+Route::get('/', function () {
+    return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/profile', 'ProfileController@index')->name('profile');
+Route::put('/profile', 'ProfileController@update')->name('profile.update');

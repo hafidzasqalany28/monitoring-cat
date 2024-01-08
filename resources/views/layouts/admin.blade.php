@@ -51,14 +51,6 @@
                     <span>{{ __('Dashboard') }}</span></a>
             </li>
 
-            <!-- Nav Item - History Lokasi Kucing -->
-            <li class="nav-item {{ Nav::isRoute('history') }}">
-                <a class="nav-link" href="{{ route('history') }}">
-                    <i class="fas fa-fw fa-map-marker"></i>
-                    <span>{{ __('History Lokasi Kucing') }}</span>
-                </a>
-            </li>
-
             <!-- Divider -->
             <hr class="sidebar-divider">
 

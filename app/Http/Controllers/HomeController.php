@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Location;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -26,9 +27,19 @@ class HomeController extends Controller
     {
         $users = User::count();
 
+        // Fetch the last 5 locations with device status
+        $locations = Location::latest()->take(5)->get();
+
+        // Simulate dynamic device status
+        $deviceStatus = [
+            'status' => 'Online',
+            'lastUpdate' => now()->format('Y-m-d h:i A'),
+        ];
+
         $widget = [
             'users' => $users,
-            //...
+            'deviceStatus' => $deviceStatus,
+            'locations' => $locations,
         ];
 
         return view('home', compact('widget'));
