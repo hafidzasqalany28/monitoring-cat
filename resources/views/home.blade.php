@@ -85,7 +85,7 @@
                 })
             }).addTo(map);
 
-            marker.bindPopup("<b>Location {{ $index + 1 }}</b><br>Latitude: {{ $location->latitude }}<br>Longitude: {{ $location->longitude }}<br>Created At: {{ $location->created_at }}<br><a href='https://www.google.com/maps?q={{ $location->latitude }},{{ $location->longitude }}' target='_blank'>Open in Google Maps</a>");
+            marker.bindPopup("<b>Location {{ $index + 1 }}</b><br>Latitude: {{ $location->latitude }}<br>Longitude: {{ $location->longitude }}<br><br><a href='https://www.google.com/maps?q={{ $location->latitude }},{{ $location->longitude }}' target='_blank'>Open in Google Maps</a>");
 
             marker.on('mouseover', function (e) {
                 this.openPopup();
