@@ -47,23 +47,24 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="card-profile-stats">
-                            <span class="heading">22</span>
-                            <span class="description">Friends</span>
+                            <span class="heading">{{ $widget['deviceStatus']['status'] }}</span>
+                            <span class="description">Device Status</span>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="card-profile-stats">
-                            <span class="heading">10</span>
-                            <span class="description">Photos</span>
+                            <span class="heading">{{ $widget['users'] }}</span>
+                            <span class="description">Users</span>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="card-profile-stats">
-                            <span class="heading">89</span>
-                            <span class="description">Comments</span>
+                            <span class="heading">{{ count($widget['locations']) }}</span>
+                            <span class="description">Locations</span>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
 
