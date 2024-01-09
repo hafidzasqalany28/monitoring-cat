@@ -27,8 +27,8 @@ class HomeController extends Controller
     {
         $users = User::count();
 
-        // Fetch the last 5 locations with device status
-        $locations = Location::latest()->take(5)->get();
+        // Fetch the last 5 locations with device status in descending order by id
+        $locations = Location::latest('id')->take(5)->get();
 
         // Simulate dynamic device status
         $deviceStatus = [

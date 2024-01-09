@@ -13,7 +13,7 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             LocationSeeder::class,
-            UserSeeder::class,
+            // UserSeeder::class,
             // Tambahkan seeder lain jika ada
         ]);
 
