@@ -59,7 +59,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="card-profile-stats">
-                            <span class="heading">{{ count($widget['locations']) }}</span>
+                            <span class="heading">{{ $widget['locations'] }}</span>
                             <span class="description">Locations</span>
                         </div>
                     </div>

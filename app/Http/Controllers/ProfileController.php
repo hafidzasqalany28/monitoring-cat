@@ -24,7 +24,7 @@ class ProfileController extends Controller
         $userCount = User::count();
 
         // Mengambil informasi lokasi dari model Location
-        $locations = Location::latest()->limit(5)->get();
+        $locations = Location::count();
 
         // Inisialisasi variabel $widget
         $widget = [

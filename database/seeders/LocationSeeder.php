@@ -13,8 +13,8 @@ class LocationSeeder extends Seeder
     public function run(): void
     {
         // Lokasi awal (Musamus University)
-        $baseLatitude = -8.5318299;
-        $baseLongitude = 140.4145145;
+        $baseLatitude = -8.5318352;
+        $baseLongitude = 140.4170948;
 
         // Jumlah lokasi yang ingin ditambahkan
         $numberOfLocations = 5;
