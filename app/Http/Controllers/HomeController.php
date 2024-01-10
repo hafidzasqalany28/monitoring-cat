@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\Location;
 use Illuminate\Http\Request;
+use App\Notifications\CatFarFromHomeNotification;
 
 class HomeController extends Controller
 {
@@ -46,6 +47,11 @@ class HomeController extends Controller
 
         // Create a variable to store the status
         $isFarFromHome = $distance > $thresholdDistance;
+
+        // send email notification if the cat is far from home
+        if ($isFarFromHome) {
+            auth()->user()->notify(new CatFarFromHomeNotification(['distance' => $distance]));
+        }
 
         // Simulate dynamic device status
         $deviceStatus = [
